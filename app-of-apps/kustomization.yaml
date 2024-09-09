@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: dot-9924 
+  janus-idp.io/tekton: dot-9924
+  backstage.io/kubernetes-id: dot-9924
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: dot-9924
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
